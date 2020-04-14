@@ -2,7 +2,7 @@
 //  COVID19FighterGameScene.swift
 //  XcodeSwiftDevelopment
 //
-//  Created by YOUOHSHIMA on 2020/04/15.
+//  Created by Team SunStripe on 2020/04/15.
 //  Copyright © 2020年 TeamSunstripe. All rights reserved.
 //
 
