@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="17G65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -94,10 +95,27 @@
                                 </constraints>
                                 <state key="normal" title="リバーシを作ろう"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR7-Ui-GBq">
+                                <rect key="frame" x="458" y="170" width="94" height="58"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="SVv-cz-kGF"/>
+                                    <constraint firstAttribute="width" constant="94" id="k7n-v2-yng"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                <state key="normal" title="COVID-19">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZnQ-Wa-n23" kind="showDetail" id="7qe-Ll-Gpv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="FR7-Ui-GBq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-101" id="1JQ-yH-3kp"/>
                             <constraint firstItem="afw-gj-kqZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Dx-S4-NHN"/>
                             <constraint firstItem="BEY-4e-48u" firstAttribute="width" secondItem="SnD-tL-HWi" secondAttribute="width" id="7bp-8Z-T0Z"/>
                             <constraint firstItem="RIr-XH-sm2" firstAttribute="width" secondItem="SnD-tL-HWi" secondAttribute="width" id="7xn-T5-c7n"/>
@@ -107,6 +125,7 @@
                             <constraint firstItem="Sh4-eG-O8u" firstAttribute="width" secondItem="SnD-tL-HWi" secondAttribute="width" id="NNs-K2-xUy"/>
                             <constraint firstItem="RIr-XH-sm2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RHr-SN-Qpa"/>
                             <constraint firstItem="SnD-tL-HWi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="S3S-tx-ERg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FR7-Ui-GBq" secondAttribute="trailing" constant="28" id="YUR-xd-cMM"/>
                             <constraint firstItem="naF-rs-iUx" firstAttribute="width" secondItem="SnD-tL-HWi" secondAttribute="width" id="Zif-BH-9xt"/>
                             <constraint firstItem="KlQ-7W-LkQ" firstAttribute="height" secondItem="SnD-tL-HWi" secondAttribute="height" id="as9-8O-6MY"/>
                             <constraint firstItem="BEY-4e-48u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bj9-pC-O9P"/>
@@ -135,6 +154,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQc-0o-J7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="662" y="-3"/>
+        </scene>
+        <!--COVID19FighterGameScene-->
+        <scene sceneID="GrL-JV-lOU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="COVID19FighterGameScene" id="ZnQ-Wa-n23" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDf-83-fr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665.5" y="136"/>
         </scene>
         <!--AnimationGameSceneViewController-->
         <scene sceneID="lgZ-IV-2X5">
