@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="17G65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XcodeSwiftDevelopment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnD-tL-HWi">
+                                <rect key="frame" x="150" y="72" width="300" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="KKJ-S9-hKR"/>
+                                    <constraint firstAttribute="height" constant="50" id="hmP-dg-dQD"/>
+                                </constraints>
+                                <state key="normal" title="ゲーム開発の準備"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIr-XH-sm2">
+                                <rect key="frame" x="150" y="130" width="300" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gdr-Rt-BDe"/>
+                                    <constraint firstAttribute="width" constant="300" id="yrQ-OM-wxz"/>
+                                </constraints>
+                                <state key="normal" title="Swiftの基本"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsP-ow-5Zs">
+                                <rect key="frame" x="150" y="188" width="300" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="OFi-Ma-Sbb"/>
+                                    <constraint firstAttribute="height" constant="50" id="dQa-LR-evt"/>
+                                </constraints>
+                                <state key="normal" title="積み上げゲームを作ろう"/>
+                                <connections>
+                                    <segue destination="h30-lM-Hz9" kind="showDetail" id="gva-r1-zqy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afw-gj-kqZ">
+                                <rect key="frame" x="150" y="246" width="300" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Em8-tW-FSG"/>
+                                    <constraint firstAttribute="width" constant="300" id="YgX-hR-hKb"/>
+                                </constraints>
+                                <state key="normal" title="横スクロールアクションゲームを作ろう"/>
+                                <connections>
+                                    <segue destination="SjO-AY-hu4" kind="showDetail" id="bux-jz-k05"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlQ-7W-LkQ">
+                                <rect key="frame" x="150" y="304" width="300" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="0oF-d7-k7X"/>
+                                    <constraint firstAttribute="height" constant="50" id="zEC-2q-gq4"/>
+                                </constraints>
+                                <state key="normal" title="ピンボールゲームを作ろう"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEY-4e-48u">
+                                <rect key="frame" x="150" y="362" width="300" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5XA-2Q-hCK"/>
+                                    <constraint firstAttribute="width" constant="300" id="wWb-sS-V5g"/>
+                                </constraints>
+                                <state key="normal" title="ジャンプゲームを作ろう"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sh4-eG-O8u">
+                                <rect key="frame" x="150" y="420" width="300" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LQm-9w-DJq"/>
+                                    <constraint firstAttribute="width" constant="300" id="Vnu-43-AK9"/>
+                                </constraints>
+                                <state key="normal" title="ドットイートゲームを作ろう"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naF-rs-iUx">
+                                <rect key="frame" x="150" y="478" width="300" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1B7-Mt-piQ"/>
+                                    <constraint firstAttribute="width" constant="300" id="7Ue-N7-AOj"/>
+                                </constraints>
+                                <state key="normal" title="リバーシを作ろう"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="afw-gj-kqZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Dx-S4-NHN"/>
+                            <constraint firstItem="BEY-4e-48u" firstAttribute="width" secondItem="SnD-tL-HWi" secondAttribute="width" id="7bp-8Z-T0Z"/>
+                            <constraint firstItem="RIr-XH-sm2" firstAttribute="width" secondItem="SnD-tL-HWi" secondAttribute="width" id="7xn-T5-c7n"/>
+                            <constraint firstItem="RIr-XH-sm2" firstAttribute="height" secondItem="SnD-tL-HWi" secondAttribute="height" id="8eH-VP-oLV"/>
+                            <constraint firstItem="afw-gj-kqZ" firstAttribute="width" secondItem="SnD-tL-HWi" secondAttribute="width" id="CsV-jb-nDJ"/>
+                            <constraint firstItem="Sh4-eG-O8u" firstAttribute="height" secondItem="SnD-tL-HWi" secondAttribute="height" id="Lrf-Rd-Eos"/>
+                            <constraint firstItem="Sh4-eG-O8u" firstAttribute="width" secondItem="SnD-tL-HWi" secondAttribute="width" id="NNs-K2-xUy"/>
+                            <constraint firstItem="RIr-XH-sm2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RHr-SN-Qpa"/>
+                            <constraint firstItem="SnD-tL-HWi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="S3S-tx-ERg"/>
+                            <constraint firstItem="naF-rs-iUx" firstAttribute="width" secondItem="SnD-tL-HWi" secondAttribute="width" id="Zif-BH-9xt"/>
+                            <constraint firstItem="KlQ-7W-LkQ" firstAttribute="height" secondItem="SnD-tL-HWi" secondAttribute="height" id="as9-8O-6MY"/>
+                            <constraint firstItem="BEY-4e-48u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bj9-pC-O9P"/>
+                            <constraint firstItem="naF-rs-iUx" firstAttribute="height" secondItem="SnD-tL-HWi" secondAttribute="height" id="cix-Qy-AV5"/>
+                            <constraint firstItem="BEY-4e-48u" firstAttribute="height" secondItem="SnD-tL-HWi" secondAttribute="height" id="dJ7-tO-sgh"/>
+                            <constraint firstItem="SsP-ow-5Zs" firstAttribute="width" secondItem="SnD-tL-HWi" secondAttribute="width" id="dl2-3Q-BOu"/>
+                            <constraint firstItem="SsP-ow-5Zs" firstAttribute="height" secondItem="SnD-tL-HWi" secondAttribute="height" id="fRh-Bv-hW3"/>
+                            <constraint firstItem="KlQ-7W-LkQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gIB-2i-DEV"/>
+                            <constraint firstItem="naF-rs-iUx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h9N-oc-udn"/>
+                            <constraint firstItem="SnD-tL-HWi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i61-bO-CkY"/>
+                            <constraint firstItem="afw-gj-kqZ" firstAttribute="height" secondItem="SnD-tL-HWi" secondAttribute="height" id="lCW-mm-v9f"/>
+                            <constraint firstItem="Sh4-eG-O8u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pRy-wT-hcv"/>
+                            <constraint firstItem="KlQ-7W-LkQ" firstAttribute="width" secondItem="SnD-tL-HWi" secondAttribute="width" id="tM7-54-nxb"/>
+                            <constraint firstItem="SsP-ow-5Zs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vUB-9d-evf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="136"/>
+        </scene>
+        <!--GameSceneViewController-->
+        <scene sceneID="Rds-lI-DqR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameScene" referencedIdentifier="GameSceneViewController" id="h30-lM-Hz9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQc-0o-J7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="-3"/>
+        </scene>
+        <!--AnimationGameSceneViewController-->
+        <scene sceneID="lgZ-IV-2X5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AnimationGameScene" referencedIdentifier="AnimationGameSceneViewController" id="SjO-AY-hu4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wnc-4d-l9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692.5" y="269"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "787AA05540AC5BA2EDDD894D4EBA2F9A386C4C4A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "787AA05540AC5BA2EDDD894D4EBA2F9A386C4C4A" : 0,
+    "393931F0F11C95AEB3052E2A3113EE5FD0D66BB2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BDD66A8A-2D8D-4957-A423-6A9D9A51960D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "787AA05540AC5BA2EDDD894D4EBA2F9A386C4C4A" : "XCodeSwiftDevelopment\/",
+    "393931F0F11C95AEB3052E2A3113EE5FD0D66BB2" : "..\/..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "XcodeSwiftDevelopment",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "XcodeSwiftDevelopment\/XcodeSwiftDevelopment.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TeamSunstripe\/HelloWorld.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "393931F0F11C95AEB3052E2A3113EE5FD0D66BB2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TeamSunstripe\/XCode7SwiftDevelopment.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "787AA05540AC5BA2EDDD894D4EBA2F9A386C4C4A"
+    }
+  ]
+}

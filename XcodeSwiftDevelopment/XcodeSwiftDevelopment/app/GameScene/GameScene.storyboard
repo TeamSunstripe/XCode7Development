@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="17G65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mcQ-VV-naM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Game Scene View Controller-->
+        <scene sceneID="yCS-44-En1">
+            <objects>
+                <viewController storyboardIdentifier="GameSceneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mcQ-VV-naM" customClass="GameSceneViewController" customModule="XcodeSwiftDevelopment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BCo-he-JJd"/>
+                        <viewControllerLayoutGuide type="bottom" id="HbO-ds-vI1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zSl-LF-AW1" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GameScene" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJa-Hr-OSQ">
+                                <rect key="frame" x="225" y="20" width="150" height="55"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="48t-pB-tpV"/>
+                                    <constraint firstAttribute="height" constant="55" id="iXF-eR-oGr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iJa-Hr-OSQ" firstAttribute="top" secondItem="BCo-he-JJd" secondAttribute="bottom" id="7uP-IG-iau"/>
+                            <constraint firstItem="iJa-Hr-OSQ" firstAttribute="centerX" secondItem="zSl-LF-AW1" secondAttribute="centerX" id="h7c-eZ-OIU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8k-TZ-3ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="488"/>
+        </scene>
+    </scenes>
+</document>
