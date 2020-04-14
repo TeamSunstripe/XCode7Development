@@ -20,6 +20,9 @@
 		CE77EE0124455BF5005CFBC5 /* AnimationGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77EE0024455BF5005CFBC5 /* AnimationGameScene.swift */; settings = {ASSET_TAGS = (); }; };
 		CE77EE0324455C0B005CFBC5 /* AnimationGameSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77EE0224455C0B005CFBC5 /* AnimationGameSceneViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		CE77EE0524455C23005CFBC5 /* AnimationGameScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE77EE0424455C23005CFBC5 /* AnimationGameScene.storyboard */; settings = {ASSET_TAGS = (); }; };
+		CE77EE0824461989005CFBC5 /* COVID19FighterGameScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE77EE0724461988005CFBC5 /* COVID19FighterGameScene.storyboard */; settings = {ASSET_TAGS = (); }; };
+		CE77EE0A244619B7005CFBC5 /* COVID19FighterGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77EE09244619B7005CFBC5 /* COVID19FighterGameViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CE77EE0C244619D4005CFBC5 /* COVID19FighterGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77EE0B244619D4005CFBC5 /* COVID19FighterGameScene.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		CE77EE0024455BF5005CFBC5 /* AnimationGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationGameScene.swift; path = app/AnimationGameScene/AnimationGameScene.swift; sourceTree = "<group>"; };
 		CE77EE0224455C0B005CFBC5 /* AnimationGameSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationGameSceneViewController.swift; path = app/AnimationGameScene/AnimationGameSceneViewController.swift; sourceTree = "<group>"; };
 		CE77EE0424455C23005CFBC5 /* AnimationGameScene.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AnimationGameScene.storyboard; path = app/AnimationGameScene/AnimationGameScene.storyboard; sourceTree = "<group>"; };
+		CE77EE0724461988005CFBC5 /* COVID19FighterGameScene.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = COVID19FighterGameScene.storyboard; path = app/COVID19FighterGameScene/COVID19FighterGameScene.storyboard; sourceTree = "<group>"; };
+		CE77EE09244619B7005CFBC5 /* COVID19FighterGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = COVID19FighterGameViewController.swift; path = app/COVID19FighterGameScene/COVID19FighterGameViewController.swift; sourceTree = "<group>"; };
+		CE77EE0B244619D4005CFBC5 /* COVID19FighterGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = COVID19FighterGameScene.swift; path = app/COVID19FighterGameScene/COVID19FighterGameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,7 @@
 		CE77EDF52444CADE005CFBC5 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				CE77EE062446194B005CFBC5 /* COVID19FighterGameScene */,
 				CE77EDFF24455BC9005CFBC5 /* AnimationGameScene */,
 				CE77EDF62444CAF3005CFBC5 /* GameScene */,
 			);
@@ -165,6 +172,16 @@
 				CE77EE0224455C0B005CFBC5 /* AnimationGameSceneViewController.swift */,
 			);
 			name = AnimationGameScene;
+			sourceTree = "<group>";
+		};
+		CE77EE062446194B005CFBC5 /* COVID19FighterGameScene */ = {
+			isa = PBXGroup;
+			children = (
+				CE77EE0724461988005CFBC5 /* COVID19FighterGameScene.storyboard */,
+				CE77EE0B244619D4005CFBC5 /* COVID19FighterGameScene.swift */,
+				CE77EE09244619B7005CFBC5 /* COVID19FighterGameViewController.swift */,
+			);
+			name = COVID19FighterGameScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +290,7 @@
 				CE77EDD22444C5AB005CFBC5 /* LaunchScreen.storyboard in Resources */,
 				CE77EDCF2444C5AB005CFBC5 /* Assets.xcassets in Resources */,
 				CE77EDCD2444C5AB005CFBC5 /* Main.storyboard in Resources */,
+				CE77EE0824461989005CFBC5 /* COVID19FighterGameScene.storyboard in Resources */,
 				CE77EDFA2444CBF0005CFBC5 /* GameScene.storyboard in Resources */,
 				CE77EE0524455C23005CFBC5 /* AnimationGameScene.storyboard in Resources */,
 			);
@@ -299,8 +317,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE77EE0C244619D4005CFBC5 /* COVID19FighterGameScene.swift in Sources */,
 				CE77EE0324455C0B005CFBC5 /* AnimationGameSceneViewController.swift in Sources */,
 				CE77EDF82444CB1D005CFBC5 /* GameScene.swift in Sources */,
+				CE77EE0A244619B7005CFBC5 /* COVID19FighterGameViewController.swift in Sources */,
 				CE77EDCA2444C5AB005CFBC5 /* ViewController.swift in Sources */,
 				CE77EDC82444C5AB005CFBC5 /* AppDelegate.swift in Sources */,
 				CE77EDFC2444CC36005CFBC5 /* GameSceneViewController.swift in Sources */,
