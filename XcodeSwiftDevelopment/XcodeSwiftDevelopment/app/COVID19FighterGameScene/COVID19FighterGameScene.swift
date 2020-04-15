@@ -18,6 +18,19 @@ class COVID19FighterGameScene : SKScene,SKPhysicsContactDelegate {
     
     var background : SKSpriteNode!
     
+    struct CategoryType {
+        static let None       : UInt32 = (1 << 0) // なし デフォルト 0
+        static let Player     : UInt32 = (1 << 1) // プレイヤー
+        static let Supporter  : UInt32 = (1 << 2) // 味方
+        static let World      : UInt32 = (1 << 3) // 世界
+        static let Enemy      : UInt32 = (1 << 4) // 敵
+        static let Rival      : UInt32 = (1 << 5) // ライバル
+        static let Virus      : UInt32 = (1 << 6) // ウイルス
+        static let Lucky      : UInt32 = (1 << 7) // ラッキー
+        static let Item       : UInt32 = (1 << 8) // アイテム
+        static let Event      : UInt32 = (1 << 9) // イベント
+    }
+    
     ///
     var player : SKSpriteNode?
     
@@ -29,24 +42,24 @@ class COVID19FighterGameScene : SKScene,SKPhysicsContactDelegate {
     
     override func didMoveToView(view: SKView) {
         // 下方向に重力を追加
-        self.settingGravity()
+        self.setupGravity()
         
         /// 落下判定用のデリゲート
-        self.settingLowest()
+        self.setupLowest()
         
         // 背景のスプライトを追加
-        self.backgroundSpecialty()
+        self.setupBackgroundSpecialty()
         
         // スコアのスプライトを追加
-        self.scoreSpecialty()
+        self.setupScoreSpecialty()
         // 落下判定の追加
-        self.settingLowestShape()
+        self.setupLowestShape()
         
         // player 操作できるスプライトを追加
-        self.playerSpecialty()
+        self.setupPlayerSpecialty()
         
         // 落下させるものの準備
-        self.randomFallSpecialty()
+        self.setupRandomFallSpecialty()
         
         /// スプライトを一定間隔で落下させる
         self.setTimer()
@@ -54,7 +67,7 @@ class COVID19FighterGameScene : SKScene,SKPhysicsContactDelegate {
     }
     
     // 背景のスプライトを追加
-    func backgroundSpecialty() {
+    func setupBackgroundSpecialty() {
         let background = SKSpriteNode(imageNamed: "background-COVID-19")
         background.position = CGPoint(x: self.size.width * 0.5, y: self.size.height * 0.5)
         background.size = self.size
@@ -63,7 +76,7 @@ class COVID19FighterGameScene : SKScene,SKPhysicsContactDelegate {
     }
     
     // スコアのスプライトを追加
-    func scoreSpecialty() {
+    func setupScoreSpecialty() {
         // スコア用のラベル
         let scoreLabel = SKLabelNode(fontNamed: "Helvetica")
         scoreLabel.position = CGPoint(x: self.size.width * 0.92, y: self.size.height * 0.78)
@@ -77,9 +90,10 @@ class COVID19FighterGameScene : SKScene,SKPhysicsContactDelegate {
 
     
     // player 操作できるスプライトを追加
-    func playerSpecialty() {
+    func setupPlayerSpecialty() {
         let texture = SKTexture(imageNamed: "player");
         let sprite = SKSpriteNode(texture: texture);
+        sprite.name = "player"
         sprite.position = CGPointMake(self.size.width * 0.5, 100)
         sprite.size = CGSize(width: texture.size().width * 0.5, height: texture.size().height * 0.5)
         
@@ -109,7 +123,7 @@ class COVID19FighterGameScene : SKScene,SKPhysicsContactDelegate {
     }
     
     // 落下させる（ランダム）
-    func randomFallSpecialty() {
+    func setupRandomFallSpecialty() {
         let index = 0 // Int(arc4random_uniform(8)) // ランダム変数(0 〜 7)
         /// スコア用のラベルの査定
         self.score += self.scoreList[index]
@@ -120,8 +134,9 @@ class COVID19FighterGameScene : SKScene,SKPhysicsContactDelegate {
         }
         let texture = SKTexture(imageNamed: "COVID-19")//"\(index)");
         let sprite = SKSpriteNode(texture: texture);
+        sprite.name = "COVID-19"
         sprite.position = CGPointMake(self.size.width * 0.5, self.size.height)
-        sprite.size = CGSize(width: texture.size().width * 0.5, height: texture.size().height * 0.5)
+        sprite.size = CGSize(width: texture.size().width * 0.2, height: texture.size().height * 0.2)
         
         // テクスチャーからPhysicsBodyを追加
         sprite.physicsBody = SKPhysicsBody(texture: texture,size: sprite.size)
@@ -131,26 +146,28 @@ class COVID19FighterGameScene : SKScene,SKPhysicsContactDelegate {
     
     /// スプライトを落下させる
     // 下方向に重力を追加
-    func settingGravity() {
+    func setupGravity() {
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.2);
     }
     
     /// スプライトを一定間隔で落下させよう
     func setTimer () {
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "randomFallSpecialty", userInfo: nil, repeats: true)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "setupRandomFallSpecialty", userInfo: nil, repeats: true)
     }
     
     /// ゲームオーバー処理を追加しよう
     
     /// 落下判定用のデリゲート
-    func settingLowest() {
+    func setupLowest() {
         self.physicsWorld.contactDelegate = self
     }
     
     /// 落下判定用の設置
-    func settingLowestShape() {
+    func setupLowestShape() {
         let lowestShape = SKShapeNode(rectOfSize: CGSize(width: self.size.width * 3.0, height: 10))
+        lowestShape.name = "障害物"
         let physicsBody = SKPhysicsBody(rectangleOfSize: lowestShape.frame.size)
+        physicsBody.categoryBitMask = CategoryType.World
         physicsBody.dynamic = false
         physicsBody.contactTestBitMask = 0x1 << 1 // 衝突を通知する対応のビットマスクを指定
         lowestShape.physicsBody = physicsBody
@@ -163,6 +180,9 @@ class COVID19FighterGameScene : SKScene,SKPhysicsContactDelegate {
     func didBeginContact(contact: SKPhysicsContact) {
         if contact.bodyA.node == self.lowestShape || contact.bodyB.node == self.lowestShape {
             // gameover()
+            print("障害物 : \(self.lowestShape)")
+            print("bodyA : \(contact.bodyA.node)")
+            print("bodyB : \(contact.bodyB.node)")
         }
     }
     
